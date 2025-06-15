@@ -11,7 +11,7 @@ import windIcon from './assets/wind.png';
 import searchIcon from './assets/search.png';
 
 function App() {
-  const apiKey = "f0ef7948b02d6e8eceb01c7532034814"; // This should be valid since HTML version works
+  const apiKey = import.meta.env.VITE_API_KEY || "f0ef7948b02d6e8eceb01c7532034814";
   const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState(null);
